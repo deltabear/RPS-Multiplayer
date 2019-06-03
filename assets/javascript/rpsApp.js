@@ -1,3 +1,7 @@
+// Create a two-player game of Rock Paper Scissors using Firebase.    
+    
+    
+    
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
     var computerChoices = ["r", "p", "s"];
 
