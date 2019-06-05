@@ -13,11 +13,20 @@
     
     
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["r", "p", "s"];
+    var gameButtons = ["r", "p", "s"];
 
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
-    var wins = 0;
-    var losses = 0;
+      //PLAYER 1 VARIABLES
+    var p1Name = "";
+    var p1Wins = 0;
+    var p1Losses = 0;
+
+      //PLAYER 2 VARIABLES
+    var p2Name = "";
+    var p2Wins = 0;
+    var p2Losses = 0;
+
+    //Shared variables since a Tie applies to both players
     var ties = 0;
 
     // Create variables that hold references to the places in the HTML where we want to display things.
