@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <!-- Header/Jumbotron for page -->
-    <div class="jumbotron">
+    <div class="jumbotron text-center">
       <h1 class="display-4">Rock, Paper, Scissors Multiplayer</h1>
     </div>
     
@@ -25,27 +25,66 @@
           This is where the rules will be displayed.
       </div>
     </div>
+
+    <br>
     
    <div class="row">
     <!-- Section for player 1's name to display and game inputs-->
     <div class="col-md-6">
-        <section id="p1-area">
-            <div id="player-1">
-                <p id="p1-name">Name 1</p>
+      <div class="card">
+        <div class="card-body">
+         
+              
+            <form>
+            <div class="form-group">
+            <label for="exampleInputPlayerName">Your name</label>
+            <input type="text" class="form-control" id="exampleInputPlayerName" placeholder="Enter your name">
             </div>
-        </section>
-    </div>
+      <!-- After submitting name, button will collapse and disappear to leave player's name -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
 
-    <!-- Section for player 2's name to display and game inputs-->
-    <div class="col-md-6">
-        <section id="p2-area">
-            <div id="player-2">
-                <p id="p2-name">Name 2</p>
+          <section id="p1-area">
+            <div id="player-1">
+
             </div>
-        </section>  
-    </div>
-   
+          </section>  
+        </div>
+      </div>
+    </div>   
+
+
+      <!-- Section for player 2's name to display and game inputs-->
+    
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">     
+                <form>
+                <div class="form-group">
+                <label for="exampleInputPlayerName2">Your name</label>
+                <input type="text" class="form-control" id="exampleInputPlayerName2" placeholder="Enter your name">
+                </div>
+          <!-- After submitting name, button will collapse and disappear to leave player's name -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <hr>
+      
+            <section id="p2-area">
+                <div id="player-2">
+
+                </div>
+            </section>  
+        </div>
+      </div>
+    </div>   
+          
+              
+   <!-- end of row div -->
    </div>
+
+
+<!-- end of main container div -->
 </div>  
 
     <!-- jQuery JS -->
