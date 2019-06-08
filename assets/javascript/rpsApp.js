@@ -52,4 +52,66 @@ var database = firebase.database();
       newMessage.innerHTML = textbox.value
       messages.appendChild(newMessage);
       textbox.nodeValue = "";
+
+      // Create variables that hold references to the places in the HTML where we want to display things.
+    var directionsText = document.getElementById("directions-text");
+    var user1ChoiceText = document.getElementById("user1choice-text");
+    var user2ChoiceText = document.getElementById("user2choice-text");
+    var winsText = document.getElementById("wins-text");
+    var lossesText = document.getElementById("losses-text");
+    var tiesText = document.getElementById("ties-text");
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Only run the following code block if the user presses "r" or "p" or "s".
+      if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+
+        // If we choose rock and the computer guesses scissors, increment our wins variable.
+        if ((userGuess === "r") && (computerGuess === "s")) {
+          wins++;
+        }
+
+        // If we choose rock and the computer guesses paper, increment our losses variable.
+        if ((userGuess === "r") && (computerGuess === "p")) {
+          losses++;
+        }
+
+        // If we choose scissors and the computer guesses rock, increment our losses variable.
+        if ((userGuess === "s") && (computerGuess === "r")) {
+          losses++;
+        }
+
+        // If we choose scissors and the computer guesses paper, increment our wins variable.
+        if ((userGuess === "s") && (computerGuess === "p")) {
+          wins++;
+        }
+
+        // If we choose paper and the computer guesses rock, increment our wins variable.
+        if ((userGuess === "p") && (computerGuess === "r")) {
+          wins++;
+        }
+
+        // If we choose paper and the computer guesses scissors, increment our losses variable.
+        if ((userGuess === "p") && (computerGuess === "s")) {
+          losses++;
+        }
+
+        // If we choose the same thing as the computer, increment our ties variable.
+        if (userGuess === computerGuess) {
+          ties++;
+        }
+
+        // Hide the directions
+        directionsText.textContent = "";
+
+        // Display the user and computer guesses, and wins/losses/ties.
+        user1ChoiceText.textContent = "You chose: " + userGuess;
+        user2ChoiceText.textContent = "You chose: " + userGuess;
+        winsText.textContent = "wins: " + wins;
+        lossesText.textContent = "losses: " + losses;
+        tiesText.textContent = "ties: " + ties;
     });
