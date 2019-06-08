@@ -26,15 +26,18 @@ var database = firebase.database();
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
     var gameButtons = ["r", "p", "s"];
 
+    var amPlayer1 = false;
+    var amPlayer2 = false;
+
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
       //PLAYER 1 VARIABLES
-    var p1Name = "";
-    var p1Wins = 0;
-    var p1Losses = 0;
+    var p1name = "";
+    var p1wins = 0;
+    var p1losses = 0;
     // Player 2 variables
-    var p2Name = "";
-    var p2Wins = 0;
-    var p2Losses = 0;
+    var p2name = "";
+    var p2wins = 0;
+    var p2losses = 0;
     var ties = 0;
 
     //Textbox variables
