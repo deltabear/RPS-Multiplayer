@@ -10,7 +10,18 @@
   // Game will increment wins for victorious player, and increment losses for losing player.
   // Create an in-game chatting system that allows both players to chat with each other on the page
     // User types out message (with character limit?) in chat field, presses submit, and page will display it in chat feed
-    
+
+//Initialize Firebase 
+var config = {
+  apiKey: "AIzaSyAkv_QRAm4tJNyyc2o4LbR1R81aA-VCwoY",
+  authDomain: "rps-multiplayer-c6b74.firebaseapp.com",
+  databaseURL: "https://rps-multiplayer-c6b74.firebaseio.com",
+  storageBucket: "rps-multiplayer-c6b74.appspot.com",
+};
+
+firebase.initializeApp(config);
+// Create a variable to reference the database
+var database = firebase.database();
     
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
     var gameButtons = ["r", "p", "s"];
