@@ -17,8 +17,8 @@ body {
 
 #chatbox {
     text-align: left;
-    height: 270px;
-    width: 90%;
+    height: 250px;
+    width: 75%;
     background: #fff;
     border: 1px solid black;
     overflow: auto;
