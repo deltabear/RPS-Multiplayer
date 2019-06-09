@@ -24,6 +24,28 @@ body {
     overflow: auto;
 }
 
+/*Buttons now have color and margins */
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #3a4468;
+  margin-left: 6%;
+
+}
+  
+input { font:12px arial; }
+
+#wrapper, #loginform {
+  margin:0 auto;
+  padding-bottom:25px;
+  background:#EBF4FB;
+  width:504px;
+  border:1px solid #ACD8F0; }
+
+#loginform { padding-top:18px; }
+
+#loginform p { margin: 5px; }
+
 .row {
   justify-content: center;
 }
@@ -35,14 +57,17 @@ body {
 #playerInterface {
   min-height: 200px;
   background: #fff;
+  border-color: #3a4468;
 }
 
 #playerInterface1 {
   min-height: 200px;
   background: #fff;
+  border-color: #3a4468;
 }
 
 #playerInterface2 {
   min-height: 200px;
   background: #fff;
+  border-color: #3a4468;
 }
