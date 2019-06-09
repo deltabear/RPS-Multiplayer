@@ -6,3 +6,9 @@ This application utilizes:
 * Javascript
 * jQuery
 * Firebase.
+
+Future versions will include:
+* Streamlined HTML/CSS
+* Functioning script for players to choose their names
+* Working app logic
+* Working chat systemS
