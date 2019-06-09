@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Firebase Javascript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    
 
 </head>
 
@@ -29,7 +30,7 @@
                   <form role="form">
                     <div class="form-group">
                       <div class="input-group">
-                 <input type="text" class="form-control" id="name-input">
+                 <input type="text" class="form-control" id="name-input" placeholder="Your name">
                  <span class="input-group-btn">
                       <button class="btn btn-default" id="new-player" type="button">Enter the Game</button>
                  </span>
@@ -57,8 +58,8 @@
           <div class="col-md-4">
             <div class="panel panel-default text-center" id="playerInterface1">
               <h2><span id="player-1-name">Waiting for Player 1</span></h2>
-              <h3>Wins: <span id="p1wins">0</span></h3>
-              <h3>Loses: <span id="p1loses">0</span></h3>
+              <h3>Wins: <span id="player-1-wins">0</span></h3>
+              <h3>Loses: <span id="player-1-loses">0</span></h3>
             </div>
           </div>
 
@@ -85,7 +86,7 @@
    <div class="panel panel-default">
     <div class="panel-body">
         <form name="message" action="">
-          <input name="usermsg" type="text" id="inputText" size="63" />
+          <input name="usermsg" type="text" id="inputText" size="63" placeholder="Say hello! Or taunt the enemy player. >:)" />
           <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
       </form>         
     
@@ -97,8 +98,12 @@
 <!-- end of main container div -->
 </div>  
 
+<!-- Moment.js should go here -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <!-- jQuery JS -->
 <script src="https://code.jquery.com/jquery.js"></script>
+<script src="assets/javascript/rpsApp.js" type="text/Javascript"></script>
+
   
 </body>
 
