@@ -13,16 +13,18 @@
 
 //Initialize Firebase 
 var config = {
-  apiKey: "AIzaSyAkv_QRAm4tJNyyc2o4LbR1R81aA-VCwoY",
-  authDomain: "rps-multiplayer-c6b74.firebaseapp.com",
-  databaseURL: "https://rps-multiplayer-c6b74.firebaseio.com",
-  storageBucket: "rps-multiplayer-c6b74.appspot.com",
+    apiKey: "AIzaSyAkv_QRAm4tJNyyc2o4LbR1R81aA-VCwoY",
+    authDomain: "rps-multiplayer-c6b74.firebaseapp.com",
+    databaseURL: "https://rps-multiplayer-c6b74.firebaseio.com",
+    storageBucket: "rps-multiplayer-c6b74.appspot.com",
+    messagingSenderId: "411211635971",
 };
 
 firebase.initializeApp(config);
 // Create a variable to reference the database
 var database = firebase.database();
 
+var NUM_PLAYERS = 2;
 var amPlayer1 = false;
 var amPlayer2 = false;
 
@@ -66,21 +68,7 @@ function newPlayer() {
     console.log("you'll just have to wait");
   }
 
-  if (isPlayer1 && !amPlayer2) {
-    database.ref("players").update({
-      isPlayer1: false,
-
-    })
-  } else if (isPlayer2 && !amPlayer1) {
-    database.ref("players").update({
-
-      isPlayer2: false
-    })
-  }
-}
-
-
-
+  newPlayer();
 
 $(function () {
   var messagesRef = database.ref("chat");
@@ -336,9 +324,7 @@ function check(firstarg, secondarg) {
       });
 
 
+      }
     }
   }
 }
-
-
-
