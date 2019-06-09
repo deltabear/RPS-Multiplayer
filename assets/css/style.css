@@ -1,5 +1,5 @@
 .jumbotron{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 body {
@@ -22,4 +22,27 @@ body {
     background: #fff;
     border: 1px solid black;
     overflow: auto;
+}
+
+.row {
+  justify-content: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+#playerInterface {
+  min-height: 200px;
+  background: #fff;
+}
+
+#playerInterface1 {
+  min-height: 200px;
+  background: #fff;
+}
+
+#playerInterface2 {
+  min-height: 200px;
+  background: #fff;
 }
