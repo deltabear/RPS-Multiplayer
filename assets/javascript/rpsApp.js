@@ -41,6 +41,12 @@ var player2name;
 var nameHolder;
 
 
+$(document).ready(function(){
+  $("input-group-button").click(function(){
+    document.getElementById("new-player")
+  });
+});
+
 function newPlayer() {
   if (isPlayer1 && !amPlayer2) {
     nameHolder = $("#name-input").val().trim();
