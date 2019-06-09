@@ -21,75 +21,65 @@
       <h1 class="display-4">Rock, Paper, Scissors 2-Player</h1>
     </div>
     
-    <!-- Area to display rules -->
-    <div class="card">
-      <div class="card-body">
-          Welcome! You will be assigned as Player 1 or 2, and then press 'r' for rock, 's' for scissors, and 'p' for paper. 
-          <br>When you and your opponent have both made your choices, then the game will display who has won! 
-      </div>
-    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+              <div class="panel panel-default">
+                <div class="panel-body">         
+                  <form role="form">
+                    <div class="form-group">
+                      <div class="input-group">
+                 <input type="text" class="form-control" id="name-input">
+                 <span class="input-group-btn">
+                      <button class="btn btn-default" id="new-player" type="button">Enter the Game</button>
+                 </span>
+              </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
 
-    <br>
-    
-   <div class="row">
-    <!-- Section for player 1's name to display and game inputs-->
-    <div class="col-md-6">
+    <!-- Area to display rules -->
+    <div class="row">
       <div class="card">
         <div class="card-body">
-         
-              
-            <form>
-            <div class="form-group">
-            <label for="exampleInputPlayerName">Your name</label>
-            <input type="text" class="form-control" id="exampleInputPlayerName" placeholder="Enter your name">
-            </div>
-      <!-- After submitting name, button will collapse and disappear to leave player's name -->
-        <button onclick="submitButtonClicked()" type="button" id="add-p1name" class="btn btn-success">Submit</button>
-            </form>
-            <hr>
-
-          <section id="p1-area">
-            <p id="user1choice-text"></p>
-            <p id="wins-text"></p>
-            <p id="losses-text"></p>
-            
-          </section>  
+            Welcome! You will be assigned as Player 1 or 2, and then press 'r' for rock, 's' for scissors, and 'p' for paper. 
+            <br>When you and your opponent have both made your choices, then the game will display who has won! 
         </div>
       </div>
-    </div>   
-
-
-      <!-- Section for player 2's name to display and game inputs-->
-    
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">     
-                <form>
-                <div class="form-group">
-                <label for="exampleInputPlayerName2">Your name</label>
-                <input type="text" class="form-control" id="exampleInputPlayerName2" placeholder="Enter your name">
-                </div>
-        <!-- After submitting name, button will collapse and disappear to leave player's name -->
-          <button onclick="submitButtonClicked()" type="button" id="add-p1name" class="btn btn-success">Submit</button>
-                </form>
-                <hr>
+    </div>
+      <br>
       
-            <section id="p2-area">
-              <p id="user2choice-text"></p>
-              <p id="wins-text"></p>
-              <p id="losses-text"></p>
+    <!-- Area to display Player 1, Player 2, and results of each match.-->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-default text-center" id="playerInterface1">
+              <h2><span id="player-1-name">Waiting for Player 1</span></h2>
+              <h3>Wins: <span id="p1wins">0</span></h3>
+              <h3>Loses: <span id="p1loses">0</span></h3>
+            </div>
+          </div>
 
-                </div>
-            </section>  
-        </div>
-      </div>
-    </div>   
-          
+          <div class="col-md-4">
+            <div class="panel panel-default text-center" id="playerInterface">
+              <h1 id="winner"></h1>
               
-   <!-- end of row div -->
-   </div>
-
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-default text-center" id="playerInterface2">
+              <h2><span id="player-2-name">Waiting for Player 2</span></h2>
+              <h3>Wins: <span id="player-2-wins">0</span></h3>
+              <h3>Loses: <span id="player-2-loses">0</span></h3>
+            </div>
+          </div>
+        </div>
+      
+  <br>
    <!-- Create a chatbox here-->
+   <div class="row">
    <div id="chatbox"></div>
 
    <div class="panel panel-default">
@@ -100,24 +90,15 @@
       </form>         
     
     </div>
-  </div>
-
-</div>
+   </div>
+   </div>
+   </div>
 
 <!-- end of main container div -->
 </div>  
 
-<!-- Footer -->
-<footer class="bottom text-center">
-  <div class="card bg-secondary text-white">
-      <div class="card-header">
-        Created by E. Delzer 2019
-      </div>
-    </div>   
-</footer>
-
-  <!-- jQuery JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
   
 </body>
 
